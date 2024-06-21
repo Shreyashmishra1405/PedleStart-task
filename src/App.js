@@ -1,37 +1,48 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const data = [
+  const [data, setData] = useState([
     {
-      title: "Website",
+      title: "Sample task",
       description:
-        " lorem23 lorem epsunm lorem epsunm lorem lorem23 lorem epsunm lorem epsunm lorem  lorem23 lorem epsunm lorem epsunm lorem epsunm lorem epsunm lorem epsunm lorem epsunm ",
-      deadline: "12/4/24 ",
-      time: "11:00pm",
+        " sample description lorem23 lorem epsunm lorem epsunm lorem lorem23 lorem epsunm lorem epsunm lorem  lorem23 lorem epsunm lorem epsunm lorem epsunm lorem epsunm lorem epsunm lorem epsunm ",
+      due: "12/4/24 ",
     },
     {
-      title: "Website",
+      title: "Sample task",
       description:
-        " lorem23 lorem epsunm lorem epsunm lorem lorem23 lorem epsunm lorem epsunm lorem  lorem23 lorem epsunm lorem epsunm lorem epsunm lorem epsunm lorem epsunm lorem epsunm ",
-      deadline: "12/4/24 - 11:00pm",
-      time: "",
+        " sample description lorem23 lorem epsunm lorem epsunm lorem lorem23 lorem epsunm lorem epsunm lorem  lorem23 lorem epsunm lorem epsunm lorem epsunm lorem epsunm lorem epsunm lorem epsunm ",
+      due: "12/4/24 ",
     },
     {
-      title: "Website",
+      title: "Sample task",
       description:
-        " lorem23 lorem epsunm lorem epsunm lorem lorem23 lorem epsunm lorem epsunm lorem  lorem23 lorem epsunm lorem epsunm lorem epsunm lorem epsunm lorem epsunm lorem epsunm ",
-      deadline: "12/4/24 ",
-      time: "11:00pm",
+        " sample description lorem23 lorem epsunm lorem epsunm lorem lorem23 lorem epsunm lorem epsunm lorem  lorem23 lorem epsunm lorem epsunm lorem epsunm lorem epsunm lorem epsunm lorem epsunm ",
+      due: "12/4/24 ",
     },
 
     {
-      title: "Website",
+      title: "Sample task",
       description:
-        " lorem23 lorem epsunm lorem epsunm lorem lorem23 lorem epsunm lorem epsunm lorem  lorem23 lorem epsunm lorem epsunm lorem epsunm lorem epsunm lorem epsunm lorem epsunm ",
-      deadline: "12/4/24 ",
-      time: "11:00pm",
+        " sample description lorem23 lorem epsunm lorem epsunm lorem lorem23 lorem epsunm lorem epsunm lorem  lorem23 lorem epsunm lorem epsunm lorem epsunm lorem epsunm lorem epsunm lorem epsunm ",
+      due: "12/4/24 ",
     },
-  ];
+      {
+      title: "Sample task",
+      description:
+        " sample description lorem23 lorem epsunm lorem epsunm lorem lorem23 lorem epsunm lorem epsunm lorem  lorem23 lorem epsunm lorem epsunm lorem epsunm lorem epsunm lorem epsunm lorem epsunm ",
+      due: "12/4/24 ",
+    },
+  ]);
+
+  const [input, setInput] = useState("");
+  const [input2, setInput2] = useState("");
+  // console.log(input2);
+
+
+
+
 
   return (
     <>
@@ -59,7 +70,7 @@ function App() {
                     </svg>
                   </div>
                   <h1 className="p-2  cursor-pointer">
-                    {item.title} | Due: {item.deadline} | {item.time}{" "}
+                    {item.title} | Due: {item.due}
                   </h1>
                   <div className="p-2 flex flex-row justify-between gap-4 text-gray-500 ">
                     <span className="font-light  font-mono  cursor-pointer">
@@ -82,18 +93,27 @@ function App() {
                 <span>Title:</span>
                 <input
                   type="text"
+                  required
+                  value={input}
                   placeholder="enter title"
-                  className="px-4 py-2 text-sm rounded capitalize"
+                  className="px-4 py-2 text-sm rounded capitalize text-black"
+                  onChange={(e)=>setInput(e.target.value)}
                 />
               </div>
               <div className="flex gap-4 justifiy-center items-center ">
                 <textarea
                   className="border font-serif active:border-black p-4 text-xs min-h-[80px] text-black"
                   cols="30"
-                  placeholder="Let us know what's on your mind..."
+                  value={input2}
+                  required
+                  placeholder="put up description about task..."
+                  onChange={(e)=>setInput2(e.target.value)}
+                  // value={input.description}
                 ></textarea>
               </div>
-              <button className=" border px-6 py-2 w-1/3 active:bg-white active:text-black ">Add</button>
+                <button className=" border px-6 py-2 w-1/3 active:bg-white active:text-black">
+                  Add
+                </button>
             </div>
           </div>
         </div>
