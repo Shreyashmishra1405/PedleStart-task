@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/PedleStart-task/static/css/main.3cc219fa.css",
+    "main.js": "/PedleStart-task/static/js/main.bf60e898.js",
+    "static/js/453.27ae36fd.chunk.js": "/PedleStart-task/static/js/453.27ae36fd.chunk.js",
+    "index.html": "/PedleStart-task/index.html",
+    "main.3cc219fa.css.map": "/PedleStart-task/static/css/main.3cc219fa.css.map",
+    "main.bf60e898.js.map": "/PedleStart-task/static/js/main.bf60e898.js.map",
+    "453.27ae36fd.chunk.js.map": "/PedleStart-task/static/js/453.27ae36fd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3cc219fa.css",
+    "static/js/main.bf60e898.js"
+  ]
+}
